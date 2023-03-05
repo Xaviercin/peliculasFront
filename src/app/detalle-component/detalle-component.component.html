@@ -1,0 +1,56 @@
+
+<form>
+    <div class="but">
+    <button type="button" class="btn btn-outline-danger" (click)="goBack()">Atrás</button>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group" >
+            <label>Nombre de la película</label>
+            <input class="form-control " value={{movieName}} disabled>
+            </div>
+            <div class="form-group">
+                <label>Año de salida</label>
+                <input class="form-control " value={{releaseDate}} disabled>
+            </div>
+            <div class="form-group">
+                <label>Director</label>
+                <input class="form-control " value={{movieDirector}} disabled>
+            </div>
+            <div class="form-group">
+                <label>Idioma</label>
+                <input class="form-control " value={{movieLanguage}} disabled>
+            </div>
+            <div class="form-group">
+                <label>Duración</label>
+                <input class="form-control " value={{movieDuration}} disabled>
+            </div>
+            <div class="form-group">
+                <label>Género</label>
+                <input class="form-control " value={{movieGenre}} disabled>
+            </div>
+            <div class="form-group">
+            <label>Argumento</label>
+            <textarea class="form-control " rows="3" disabled>{{movieDescription}}</textarea>
+            </div>
+        </div>
+    </div>
+  </form>
+<!--
+<div>
+    <h1>Detalle de la película</h1>
+    <a>{{movieName}}</a>
+    <br>
+    <a>{{releaseDate}}</a>
+    <br>
+    <a>{{movieDescription}}</a>
+    <br>
+    <a>{{movieLanguage}}</a>
+    <br>
+    <a>{{movieDirector}}</a>
+    <br>
+    <a>{{movieDuration}}</a>
+    <br>
+    <a>{{movieGenre}}</a>
+</div>
+-->

@@ -1,0 +1,31 @@
+<div>
+  <router-outlet></router-outlet>
+  <div *ngIf="route.children.length === 0">
+    <div class="card">
+      <div class="card-header">
+        <h1>Buscar películas</h1>
+      </div>
+      <div class="card-body">
+
+        <div class="centered">
+          <div class="input-group rounded">
+            <input #searchTextBox type="search" class="form-control rounded"
+              placeholder="Introduzca el nombre de la película" aria-label="Search" aria-describedby="search-addon" />
+            <span (click)="searchClick(searchTextBox.value)" class="input-group-text border-0">
+              <i class="bi-search" style="font-size: 2rem;"></i>
+            </span>
+          </div>
+        </div>
+        <div class="container">
+          <div class="list-group centered" *ngFor="let movie of moviesArray">
+            <button type="button" class="list-group-item list-group-item-action" routerLink="/detalle/{{movie.imdbID}}">
+              {{movie.Title}}
+            </button>
+          </div>
+          <div class="centered" *ngIf="moviesArray===undefined">
+            <a>No se encontraron películas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
